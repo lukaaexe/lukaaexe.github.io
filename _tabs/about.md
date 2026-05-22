@@ -4,8 +4,6 @@ icon: fas fa-info-circle
 order: 4
 ---
 
-# About
-
 Dung Do Quang — undergraduate student from FPT University, focus on malware analysis
 and defensive security.
 
