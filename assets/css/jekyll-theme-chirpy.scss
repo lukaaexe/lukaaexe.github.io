@@ -1,0 +1,109 @@
+---
+---
+
+@use "main
+{%- include origin-type.css -%}
+";
+
+/* ============================================
+   CUSTOM FONTS
+   ============================================ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+body {
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+}
+
+code, pre, kbd, samp {
+  font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace !important;
+}
+
+#sidebar .site-title a {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-weight: 700;
+}
+
+#sidebar .site-subtitle {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.85rem;
+}
+
+/* ============================================
+   CUSTOM COLORS - DARK MODE (cyan accent)
+   ============================================ */
+html[data-mode="dark"] {
+  --link-color: #00d9ff;
+  --link-underline-color: #00d9ff;
+  --main-bg: #0d1117;
+  --mask-bg: #161b22;
+  --sidebar-bg: linear-gradient(180deg, #0d1117 0%, #161b22 100%);
+  --topbar-bg: rgba(13, 17, 23, 0.7);
+  --heading-color: #e6edf3;
+  --text-color: #c9d1d9;
+  --tag-bg: rgba(0, 217, 255, 0.1);
+  --tag-border: #00d9ff;
+  --tag-hover: rgba(0, 217, 255, 0.2);
+  --btn-border-color: #00d9ff;
+  --code-bg: #161b22;
+  --highlight-bg-color: #161b22;
+  --highlighter-rouge-color: #00d9ff;
+}
+
+/* ============================================
+   CUSTOM COLORS - LIGHT MODE (GitHub blue accent)
+   ============================================ */
+html[data-mode="light"],
+html:not([data-mode]) {
+  --link-color: #0969da;
+  --link-underline-color: #0969da;
+  --heading-color: #1f2328;
+  --tag-bg: #ddf4ff;
+  --tag-border: #0969da;
+}
+
+/* ============================================
+   EXTRA POLISH
+   ============================================ */
+
+/* Sidebar avatar to hơn xíu */
+#avatar {
+  border: 2px solid var(--link-color);
+  transition: transform 0.3s ease;
+}
+
+#avatar:hover {
+  transform: scale(1.05);
+}
+
+/* Link có underline animation */
+.post-content a:not(.img-link) {
+  text-decoration: none;
+  border-bottom: 1px solid var(--link-color);
+  transition: all 0.2s ease;
+}
+
+.post-content a:not(.img-link):hover {
+  background-color: var(--tag-bg);
+  padding: 0 2px;
+}
+
+/* Code block đẹp hơn */
+.highlight {
+  border-radius: 8px;
+  border: 1px solid var(--tag-border);
+}
+
+/* Tag chips */
+.post-tag {
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.post-tag:hover {
+  transform: translateY(-1px);
+}
